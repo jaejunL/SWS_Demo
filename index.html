@@ -22,16 +22,20 @@
 		<!-- Header -->
 			<section id="header">
 				<div class="inner">
-					
-					<h1><strong>HYFace Demo Page</strong></h1>
-					<p>Anonymous Athors</p>
-					<hr style="width:50%;color:white">
+					<center>
+					<h1><strong>Hear Your Face: Face-based voice conversion with F0 estimation</strong></h1>
+					<p>Anonymous Authors</p>
+					<hr style="width:70%;color:white">
 					<h2>Abstract</h2>
-					<div class="col-6 col-12-medium"><p>
+					<div class="col-6 col-12-medium" style="max-width:1000px; margin-top: 20px; margin-bottom: 40px"><p>
 						This paper delves into the emerging field of face-based voice conversion, leveraging the unique relationship between an individual's facial features and their vocal characteristics.
 						We present a novel face-based voice conversion framework that particularly utilizes the average fundamental frequency of the target speaker, derived solely from their facial images.
-						Through extensive analysis, our framework demonstrates superior speech generation quality and the ability to align facial features with voice characteristics, including tracking of the target speaker's fundamental frequency.</br>
+						Through extensive analysis, our framework demonstrates superior speech generation quality and the ability to align facial features with voice characteristics, including tracking of the target speaker's fundamental frequency.</br></br></br>
 						</p>
+						<p><img align="center" src="media/figure.png" style="  display: block ;
+							margin-left: auto;
+							margin-right: auto;
+							width: 100%;"></p>
 					</div>
 					<ul class="actions special">
 						<li><a href="#one" class="button scrolly">Discover</a></li>
@@ -43,148 +47,267 @@
 			<section id="one" class="main style1">
 				<div class="container">
 					<header class="major">
-						<h2>Male-to-Male Samples</h2>
+						<h1>Conversion samples</h1>
 					</header>
-					<div class="row gtr-150">
-						<div class="col">
-							<h3>Source</h3>
-							<span class="image fit"><img src="images/MM1s.jpg" alt="" /></span>
-							
-							<audio controls>
-								<source src="images/MM1s.wav" type="audio/wav">
-							</audio>
-							<p>Source utterance</p>							
-							<audio controls>
-								<source src="images/MM1c_b.wav" type="audio/wav">
-							</audio>
-							<p>FVMVC</p>
-						</div>
-						<div class="col">
-							<h3>Target</h3>
-							<span class="image fit"><img src="images/MM1t.jpg" alt="" /></span>
-							<audio controls>
-								<source src="images/MM1t.wav" type="audio/wav">
-							</audio>
-							<p>Target utterance</p>
-							<audio controls>
-								<source src="images/MM1c_p.wav" type="audio/wav">
-							</audio>
-							<p>HYFace</p>
-						</div>
-						
-						
-					</div>
+					<header>
+						<h3 style="line-height: 1"> 1. Conversion samples with benchmark </h3>
+						<h5 style="line-height: 1.4; color:black;">Utilize speech audio from the Source and a facial image from the Target.</br>
+							(<b>HYFace</b>: The proposed method. <b>FVMVC</b>: The benchmark. Sheng <img src="https://latex.codecogs.com/png.latex?\dpi{100}\color{black} et \hspace{1mm} al"/>., 2023)</h5>
+							<br>
+					</header>
+					<h4 style="line-height: 0.1">Sample 1 (male-to-male)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample1/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample1/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample1/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample1/target_audio.wav" type="audio/wav"></audio>
+							</td>
+
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample1/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample1/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
+
+					<h4 style="line-height: 0.1">Sample 2 (male-to-male)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample2/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample2/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample2/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample2/target_audio.wav" type="audio/wav"></audio>
+							</td>
+
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample2/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample2/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
+
+					<h4 style="line-height: 0.1">Sample 3 (female-to-female)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample3/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample3/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3/target_audio.wav" type="audio/wav"></audio>
+							</td>
+
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample3/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample3/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
+
+					<h4 style="line-height: 0.1">Sample 4 (female-to-female)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample4/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample4/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample4/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample4/target_audio.wav" type="audio/wav"></audio>
+							</td>
+
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample4/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample4/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
+
+					<h4 style="line-height: 0.1">Sample 5 (male-to-female)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample5/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample5/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample5/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample5/target_audio.wav" type="audio/wav"></audio>
+							</td>
+
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample5/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample5/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
+
+					<h4 style="line-height: 0.1">Sample 6 (male-to-female)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample6/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample6/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample6/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample6/target_audio.wav" type="audio/wav"></audio>
+							</td>
+
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample6/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample6/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
+
+					<h4 style="line-height: 0.1">Sample 7 (female-to-male)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample7/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample7/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample7/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample7/target_audio.wav" type="audio/wav"></audio>
+							</td>
+
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample7/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample7/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
+
+					<h4 style="line-height: 0.1">Sample 8 (female-to-male)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample8/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample8/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample8/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample8/target_audio.wav" type="audio/wav"></audio>
+							</td>
+
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample8/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample8/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
+
 				</div>
 			</section>
 
-		<!-- Two -->
 			<section id="two" class="main style1">
 				<div class="container">
-					<header class="major">
-						<h2>Female-to-Female Samples</h2>
+					<header>
+						<h3 style="line-height: 1"> 2. Conversion samples with different target image </h3>
+						<h5 style="line-height: 1.4; color:black;">Utilize speech audio from the Source and a facial image from the Target.</br></h5>
 					</header>
-					<div class="row gtr-150">
-						<div class="col">
-							<h3>Source</h3>
-							<span class="image fit"><img src="images/MM1s.jpg" alt="" /></span>
-							
-							<audio controls>
-								<source src="images/MM1s.wav" type="audio/wav">
-							</audio>
-							<p>Source utterance</p>							
-							<audio controls>
-								<source src="images/MM1c_b.wav" type="audio/wav">
-							</audio>
-							<p>FVMVC</p>
-						</div>
-						<div class="col">
-							<h3>Target</h3>
-							<span class="image fit"><img src="images/MM1t.jpg" alt="" /></span>
-							<audio controls>
-								<source src="images/MM1t.wav" type="audio/wav">
-							</audio>
-							<p>Target utterance</p>
-							<audio controls>
-								<source src="images/MM1c_p.wav" type="audio/wav">
-							</audio>
-							<p>HYFace</p>
-						</div>
-					</div>
-				</div>
-			</section>
+					<h4 style="line-height: 0.1">Sample 1 (male-to-male)</h4>
+					<!-- <table stype='width:60%' style="text-align: center;"> -->
+					<table stype='width:60%' style="text-align: center;">
+						<tr>
+							<td style="text-align: center;">Source Speaker</br>
+								<br></br>
+								<img src="media/sample1/source_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample1/source_audio.wav" type="audio/wav"></audio>
+							</td>
+							<td style="text-align: center;">Target Speaker</br>
+								<br></br>
+								<img src="media/sample1/target_image.jpg" style="width:50%" alt=""></img></br>
+								<audio controls="" style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample1/target_audio.wav" type="audio/wav"></audio>
+							</td>
 
-		<!-- Three -->
-			<section id="three" class="main style1">
-				<div class="container">
-					<header class="major">
-						<h2>Male-to-Female Samples</h2>
-					</header>
-					<div class="row gtr-150">
-						<div class="col">
-							<h3>Source</h3>
-							<span class="image fit"><img src="images/MM1s.jpg" alt="" /></span>
-							
-							<audio controls>
-								<source src="images/MM1s.wav" type="audio/wav">
-							</audio>
-							<p>Source utterance</p>							
-							<audio controls>
-								<source src="images/MM1c_b.wav" type="audio/wav">
-							</audio>
-							<p>FVMVC</p>
-						</div>
-						<div class="col">
-							<h3>Target</h3>
-							<span class="image fit"><img src="images/MM1t.jpg" alt="" /></span>
-							<audio controls>
-								<source src="images/MM1t.wav" type="audio/wav">
-							</audio>
-							<p>Target utterance</p>
-							<audio controls>
-								<source src="images/MM1c_p.wav" type="audio/wav">
-							</audio>
-							<p>HYFace</p>
-						</div>
-					</div>
+							<td style="text-align: center;" width="450px">Converted</br>
+								<br></br>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample1/fvmvc.wav" type="audio/wav"></audio>
+								<p>FVMVC</p>
+								<audio controls="" style='padding:2px; width: 280px; height: 50px'>
+								<source src="media/sample1/hyface.wav" type="audio/wav"></audio>
+								<p>HYFace</p>
+							</td>
+						</tr>
+					</table>
 				</div>
 			</section>
-		
-		<!-- Four -->
-			<section id="four" class="main style1">
-				<div class="container">
-					<header class="major">
-						<h2>Female-to-Male Samples</h2>
-					</header>
-					<div class="row gtr-150">
-						<div class="col">
-							<h3>Source</h3>
-							<span class="image fit"><img src="images/MM1s.jpg" alt="" /></span>
-							
-							<audio controls>
-								<source src="images/MM1s.wav" type="audio/wav">
-							</audio>
-							<p>Source utterance</p>							
-							<audio controls>
-								<source src="images/MM1c_b.wav" type="audio/wav">
-							</audio>
-							<p>FVMVC</p>
-						</div>
-						<div class="col">
-							<h3>Target</h3>
-							<span class="image fit"><img src="images/MM1t.jpg" alt="" /></span>
-							<audio controls>
-								<source src="images/MM1t.wav" type="audio/wav">
-							</audio>
-							<p>Target utterance</p>
-							<audio controls>
-								<source src="images/MM1c_p.wav" type="audio/wav">
-							</audio>
-							<p>HYFace</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
 
 
 		<!-- Footer -->
