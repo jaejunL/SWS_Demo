@@ -43,7 +43,7 @@
 									<p style="line-height :1;"><font size=3>
 										Figure : Overview of the proposed multi-speaker EMG-to-Speech generation framework. In the (a) Inference phase, content embedding is estimated from EMG signals, while speaker embedding and global pitch information are derived from a facial image.
 										During the (b) Training phase, for training the (i) face-based voice conversion network, a predefiend speaker-wise global pitch is used to estimate frame-wise F0 values. However, since the global pitch values for unseen target speakers are not available during the inference, a (iii) face-based global pitch estimation network is independently trained using only face images.
-										Additionally, as the speech-based content encoder is not available during inference, the (ii)~EMG-based contents estimation network is trained.
+										Additionally, as the speech-based content encoder is not available during inference, the (ii) EMG-based contents estimation network is trained.
 										Each network is trained independently during the training phase.</font></p>		
 								</p>
 							</div>
@@ -261,6 +261,7 @@
 							<!-- </tr> -->
 						</table>
 						<br /><br />
+						<br /><br />
 
 						<section id="two" class="main style1">
 							<div class="container">
@@ -309,7 +310,7 @@
 									<tr>
 										<td style="text-align: center;">Source audio</br>
 											<img src="media/emg.png" style="width:30%;height:30%" alt=""></img></br>
-											<h5 style="line-height: 1."><em>"I, too, on my side began to move towards the pit."</em></h5>
+											<h5 style="line-height: 1."><em>"I, too, on my side began to move<br> towards the pit."</em></h5>
 											<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample2_2/source_181_audio_clean.wav" type="audio/wav"></audio>
 										</td>
 									</tr>
@@ -336,14 +337,83 @@
 									</tr>
 								</table>
 								<br /><br />
+								<br /><br />
 
-						<section id="two" class="main style1">
+						<section id="three" class="main style1">
 							<div class="container">
 								<header>
-									<h3 style="line-height: 2"> 3. To be updated soon</h3>
-									<h5 style="line-height: 1.4; color:black;">Utilize the content information from the input <strong><em>silent EMG</em></strong> and a facial image from the target.</br>
-										The conversion model used here is the proposed model with a pitch-flattening module.</br>
-								</header>	
+									<h3 style="line-height: 2"> 3. Local pitch variation</h3>
+									<h5 style="line-height: 1.4; color:black;">One of the main contributions we highlight in this paper is the <em><strong>pitch-flattening module</strong></em>. Not only does it improve intelligibility, but we also demonstrate that this module enables the model to better predict content-related local pitch. The graphs below illustrate that the model with the <em><strong>pitch-flattening module</strong></em> (<em>Flatten</em>) more closely follows the ground-truth pitch variance contour compared to the base model without the module (<em>Base</em>).
+								</header>
+
+								<h4 style="line-height: 3"><strong>Sample 3-1</strong></h4>
+								<!-- <table stype='width:60%' style="text-align: center;"> -->
+								<table stype='width:60%' style="text-align: center;">
+									<!-- <tr style="text-align: center;">Source </br></tr> -->
+									<tr class="vertical-center">
+										<td>Source<br>
+											<img src="media/emg.png" style="width:30%;height:30%;align:center">
+											<h5 style="line-height: 1."><em>"He became alarmed at the news in this, and went again to Waterloo station."</em></h5>
+											<!-- <audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3_1/source.wav" type="audio/wav"></audio> -->
+										</td>
+										<td>Target<br>
+											<img src="media/sample3_1/gaddy.png" style="width:60%;height:60%" alt="">
+											<h5 style="line-height: 1.">Gaddy and Klein (2020)</h5>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="media/sample3_1/source.jpg" style="width:80%;height:30%" alt="">
+											<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3_1/source.wav" type="audio/wav"></audio>
+											<h5>Source audio</h5>
+										</td>
+										<td>
+											<img src="media/sample3_1/base.jpg" style="width:80%;height:30%" alt="">
+											<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3_1/base.wav" type="audio/wav"></audio>
+											<h5>Converted - <em>Base</em> model</h5>
+										</td>
+										<td>
+											<img src="media/sample3_1/flat.jpg" style="width:80%;height:30%" alt="">
+											<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3_1/flat.wav" type="audio/wav"></audio>
+											<h5>Converted - <em>Flatten</em> model</h5>
+										</td>
+									</tr>
+								</table>
+								<br /><br />
+
+								<h4 style="line-height: 3"><strong>Sample 3-2</strong></h4>
+								<!-- <table stype='width:60%' style="text-align: center;"> -->
+								<table stype='width:60%' style="text-align: center;">
+									<!-- <tr style="text-align: center;">Source </br></tr> -->
+									<tr class="vertical-center">
+										<td>Source<br>
+											<img src="media/emg.png" style="width:30%;height:30%;align:center">
+											<h5 style="line-height: 1."><em>"Crossed the river, and two of them, black against the western sky."</em></h5>
+											<!-- <audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3_1/source.wav" type="audio/wav"></audio> -->
+										</td>
+										<td>Target<br>
+											<img src="media/sample3_2/gaddy.png" style="width:60%;height:60%" alt="">
+											<h5 style="line-height: 1.">Gaddy and Klein (2020)</h5>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="media/sample3_2/source.jpg" style="width:80%;height:30%" alt="">
+											<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3_2/source.wav" type="audio/wav"></audio>
+											<h5>Source audio</h5>
+										</td>
+										<td>
+											<img src="media/sample3_2/base.jpg" style="width:80%;height:30%" alt="">
+											<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3_2/base.wav" type="audio/wav"></audio>
+											<h5>Converted - <em>Base</em> model</h5>
+										</td>
+										<td>
+											<img src="media/sample3_2/flat.jpg" style="width:80%;height:30%" alt="">
+											<audio controls style='display: inline-block; padding:2px; width: 240px; height: 50px;'><source src="media/sample3_2/flat.wav" type="audio/wav"></audio>
+											<h5>Converted - <em>Flatten</em> model</h5>
+										</td>
+									</tr>
+								</table>
 						<br /><br />
 						<br /><br />
 
